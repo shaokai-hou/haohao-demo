@@ -1,5 +1,6 @@
 package com.haohao.demo.springboot;
 
+import com.haohao.demo.date.DateYear;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -19,6 +20,6 @@ public class TestController {
 
     @GetMapping("/index")
     public String index() {
-        return "index";
+        return DateYear.beginDateStr();
     }
 }

@@ -10,16 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-date</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-        </dependency>
-    </dependencies>
+    <build>
+        <finalName>haohao-date</finalName>
+    </build>
 </project>
