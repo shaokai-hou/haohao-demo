@@ -1,2 +1,52 @@
+spring:
+  application:
+    name:
+  main:
+    banner-mode: console
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 15MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    locale: zh
+    time-zone: GMT+8
+    #不为空的属性才会序列化
+    default-property-inclusion: non_null
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    hikari:
+      pool-name: HikariCP
+      # 最小空闲连接数
+      minimum-idle: 5
+      # 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 180000
+      # 最大连接数，默认10
+      maximum-pool-size: 10
+      # 从连接池返回的连接的自动提交
+      auto-commit: true
+      # 连接最大存活时间，0表示永久存活，默认1800000（30分钟）
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  redis:
+    database: 1
+    password: root
+
 server:
-  port: 6060
+  port: ${random.int[1024,9999]}
+  servlet:
+    context-path: /demo
+    encoding:
+      charset: UTF-8
+
+logging:
+  level:
+    com.haohao.demo.springboot: debug
+    com.haohao.demo.springboot.TestController: error
+  file:
+    name: logs/demo.log
