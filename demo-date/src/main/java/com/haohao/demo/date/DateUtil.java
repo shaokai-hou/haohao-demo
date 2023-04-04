@@ -54,6 +54,36 @@ public class DateUtil {
         }
     }
 
+    /**
+     * 是否包含指定范围内
+     *
+     * @param dateTime      日期时间
+     * @param beginDateTime 开始日期时间
+     * @param endDateTime   结束日期时间
+     * @return result
+     */
+    public static Boolean isIn(LocalDateTime dateTime, LocalDateTime beginDateTime, LocalDateTime endDateTime) {
+        if ((beginDateTime.isBefore(dateTime) || beginDateTime.equals(dateTime)) && (endDateTime.isAfter(dateTime) || endDateTime.equals(dateTime))) {
+            return Boolean.TRUE;
+        }
+        return Boolean.FALSE;
+    }
+
+    /**
+     * 是否包含指定范围内
+     *
+     * @param date      日期
+     * @param beginDate 开始日期
+     * @param endDate   结束日期
+     * @return result
+     */
+    public static Boolean isIn(LocalDate date, LocalDate beginDate, LocalDate endDate) {
+        if ((beginDate.isBefore(date) || beginDate.equals(date)) && (endDate.isAfter(date) || endDate.equals(date))) {
+            return Boolean.TRUE;
+        }
+        return Boolean.FALSE;
+    }
+
     public static void main(String[] args) {
         System.out.println(DateUtil.nowDate());
         System.out.println(DateUtil.nowDateStr());
@@ -61,5 +91,7 @@ public class DateUtil {
         System.out.println(DateUtil.nowDateTimeStr());
         System.out.println(DateUtil.isDate("2022-02-12"));
         System.out.println(DateUtil.isDateTime("2022-02-12"));
+        System.out.println(DateUtil.isIn(LocalDateTime.of(2023, 1, 1, 0, 0), DateYear.beginDateTime(), DateYear.endDateTime()));
+        System.out.println(DateUtil.isIn(LocalDate.of(2023, 1, 1), DateYear.beginDate(), DateYear.endDate()));
     }
 }
