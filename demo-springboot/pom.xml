@@ -14,6 +14,7 @@
 
     <modules>
         <module>demo-springboot-config</module>
+        <module>demo-springboot-redis</module>
     </modules>
 
 </project>

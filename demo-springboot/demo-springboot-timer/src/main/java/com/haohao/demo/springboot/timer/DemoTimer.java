@@ -10,8 +10,14 @@ import org.springframework.stereotype.Component;
 public class DemoTimer {
 
     @Scheduled(cron = "00 10 00 * * ?")
-    public void test() {
+    public void test1() {
         // 每天凌晨00点10分执行一次
+        log.info("我被执行了 test:{}", DateUtil.now());
+    }
+
+    @Scheduled(cron = "00 00 09 15 03 ?")
+    public void test2() {
+        // 每年3月15号09点00分执行一次
         log.info("我被执行了 test:{}", DateUtil.now());
     }
 
