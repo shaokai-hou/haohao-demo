@@ -2,8 +2,8 @@
 
 ## springBoot
 
-1. [config](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-springboot/src/main/resources/application.yml)
-2. [banner](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-springboot/src/main/resources/banner.txt)
+1. [config](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-springboot/demo-springboot-config/src/main/resources/application.yml)
+2. [banner](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-springboot/demo-springboot-config/src/main/resources/banner.txt)
 3. [jpa](https://github.com/shaokai-hou/haohao-demo/tree/main/demo-springboot/demo-springboot-jpa/src/main/java/com/haohao/demo/springboot/jpa)
 
 ## other
