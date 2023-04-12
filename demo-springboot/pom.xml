@@ -15,6 +15,7 @@
     <modules>
         <module>demo-springboot-config</module>
         <module>demo-springboot-redis</module>
+        <module>demo-springboot-jpa</module>
     </modules>
 
 </project>

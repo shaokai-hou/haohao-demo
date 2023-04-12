@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <style>
+        #stitch {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            animation: moveStitch 2s ease infinite;
+        }
+
+        #stitch .eye {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 30px;
+            left: 70px;
+            border: 3px solid black;
+        }
+
+        #stitch .eye::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            top: 10px;
+            left: 10px;
+        }
+
+        #stitch .nose {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: pink;
+            top: 70px;
+            left: 93px;
+        }
+
+        #stitch .mouth {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid black;
+            top: 110px;
+            left: 75px;
+        }
+
+        #stitch .hand {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #888;
+            top: 70px;
+            left: 10px;
+        }
+
+        #stitch .foot {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #888;
+            top: 140px;
+            left: 75px;
+        }
+
+        @keyframes moveStitch {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(50px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<div id="stitch">
+    <div class="eye"></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+    <div class="hand"></div>
+    <div class="foot"></div>
+</div>
+</body>
+</html>
