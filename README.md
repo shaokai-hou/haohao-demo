@@ -8,7 +8,7 @@
 
 ## other
 
-5. [EXCEL地区表处理](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-excel/src/main/java/com/haohao/demo/excel/HandleDistrict.java)
+5. [excel地区表处理](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-excel/src/main/java/com/haohao/demo/excel/HandleDistrict.java)
 6. [Java8日期时间](https://github.com/shaokai-hou/haohao-demo/tree/main/demo-date)
 7. [百万数据导入](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-excel/src/main/java/com/haohao/demo/excel/OneHundredExport.java)
 8. [百万数据导出](https://github.com/shaokai-hou/haohao-demo/blob/main/demo-excel/src/main/java/com/haohao/demo/excel/OneHundredExport.java)
