@@ -33,7 +33,7 @@ public class Countdown {
     }
 
     public static List<JSONObject> getHolidays() {
-        String result = HttpUtil.get("http://timor.tech/api/holiday/year/2023/");
+        String result = HttpUtil.get("http://timor.tech/api/holiday/year/" + Countdown.nowDateTime.getYear() + "/");
         JSONObject obj = JSONUtil.parseObj(result);
         if (StrUtil.equals("0", obj.getStr("code"))) {
 
