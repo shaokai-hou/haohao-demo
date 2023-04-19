@@ -1,6 +1,6 @@
 spring:
   application:
-    name:
+    name: demo-springboot-config
   main:
     banner-mode: console
   servlet:
@@ -38,11 +38,28 @@ spring:
     password: root
 
 server:
+  # 任务执行完关闭进程
+  shutdown: graceful
   port: ${random.int[1024,9999]}
   servlet:
     context-path: /demo
     encoding:
       charset: UTF-8
+  tomcat:
+    uri-encoding: UTF-8
+    #post提交数据最大大小，设置为0不限制
+    max-http-form-post-size: 0
+    #最大等待队列长度
+    accept-count: 100
+    #最大连接数
+    max-connections: 8192
+    #连接超时时间
+    connection-timeout: 5000
+    threads:
+      #最大线程数
+      max: 200
+      #最小线程数
+      min-spare: 10
 
 logging:
   level:
