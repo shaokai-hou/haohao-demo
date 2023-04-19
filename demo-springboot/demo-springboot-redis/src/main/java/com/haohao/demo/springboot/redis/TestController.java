@@ -1,4 +1,4 @@
-package com.haohao.demo.redis;
+package com.haohao.demo.springboot.redis;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;

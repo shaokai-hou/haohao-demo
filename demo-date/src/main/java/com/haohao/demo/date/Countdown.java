@@ -21,7 +21,7 @@ public class Countdown {
     public static LocalDateTime nowDateTime = LocalDateTime.now();
 
     public static String getResult(String str, LocalDateTime dateTime) {
-        return StrUtil.format("{} {} 时问还有：{}", str, Countdown.getDate(dateTime), Countdown.getDateDescribe(dateTime));
+        return StrUtil.format("{} {} 时间还有：{}", str, Countdown.getDate(dateTime), Countdown.getDateDescribe(dateTime));
     }
 
     public static String getDate(LocalDateTime dateTime) {
@@ -52,8 +52,7 @@ public class Countdown {
     public static void main(String[] args) {
 
         List<JSONObject> list = getHolidays();
-        System.out.println("【摸鱼办】提醒您：下午好，摸鱼人！当前时间为：" + nowDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-        System.out.println("工作再累，一定不要忘记摸鱼哦！有事没事起身去茶水间、去厕所、去廊道走走，别老在工位上坐着。钱是老板的，命是自己的！");
+        System.out.println("下午好！当前时间为：" + nowDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         System.out.println(Countdown.getResult("距今日下班", LocalDateTime.of(nowDateTime.getYear(), nowDateTime.getMonth(), nowDateTime.getDayOfMonth(), 18, 0)));
         list.forEach(item -> System.out.println(Countdown.getResult("距离" + item.getStr("name"), item.getLocalDateTime("date", LocalDateTime.now()))));
     }

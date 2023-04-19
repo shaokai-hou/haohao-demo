@@ -9,11 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module>demo-excel</module>
         <module>demo-springboot</module>
+        <module>demo-office</module>
         <module>demo-ftp</module>
         <module>demo-date</module>
-        <module>demo-redis</module>
         <module>demo-thread</module>
     </modules>
 

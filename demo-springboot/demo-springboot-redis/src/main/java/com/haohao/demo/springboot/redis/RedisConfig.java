@@ -1,6 +1,6 @@
-package com.haohao.demo.redis;
+package com.haohao.demo.springboot.redis;
 
-import com.haohao.demo.redis.subscribe.*;
+import com.haohao.demo.springboot.redis.subscribe.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

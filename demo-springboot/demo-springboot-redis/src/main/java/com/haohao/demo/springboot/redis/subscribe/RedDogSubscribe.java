@@ -1,9 +1,9 @@
-package com.haohao.demo.redis.subscribe;
+package com.haohao.demo.springboot.redis.subscribe;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class CatSubscribe implements RedisSubscribe {
+public class RedDogSubscribe implements RedisSubscribe {
 
     /**
      * 订阅处理消息接口
@@ -12,6 +12,6 @@ public class CatSubscribe implements RedisSubscribe {
      */
     @Override
     public void receiveMessage(String message) {
-        log.info("CatSubscribe message:{}", message);
+        log.info("RedDogSubscribe message:{}", message);
     }
 }

@@ -1,4 +1,4 @@
-package com.haohao.demo.redis.subscribe;
+package com.haohao.demo.springboot.redis.subscribe;
 
 import lombok.extern.slf4j.Slf4j;
 
