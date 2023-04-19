@@ -1,6 +1,5 @@
 package com.haohao.demo.springboot.jpa.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
