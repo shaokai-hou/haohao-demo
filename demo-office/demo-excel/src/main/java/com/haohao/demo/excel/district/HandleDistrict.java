@@ -1,4 +1,4 @@
-package com.haohao.demo.excel;
+package com.haohao.demo.excel.district;
 
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.extra.spring.SpringUtil;
@@ -8,6 +8,7 @@ import com.alibaba.excel.read.listener.ReadListener;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
@@ -52,7 +53,7 @@ public class HandleDistrict {
         String sql = "insert into `demo_district` (`province`, `city`, `city_code`, `district`, `district_code`, `longitude`, `latitude`) VALUES (?, ?, ?, ?, ?, ?, ?)";
         jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
             @Override
-            public void setValues(PreparedStatement ps, int i) throws SQLException {
+            public void setValues(@NonNull PreparedStatement ps, int i) throws SQLException {
                 Map<Integer, String> rowMap = data.get(i);
                 ps.setString(1, MapUtil.getStr(rowMap, 1));
                 ps.setString(2, MapUtil.getStr(rowMap, 2));

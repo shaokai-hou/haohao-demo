@@ -16,6 +16,8 @@
         <module>demo-springboot-config</module>
         <module>demo-springboot-redis</module>
         <module>demo-springboot-jpa</module>
+        <module>demo-springboot-mybtisplus</module>
+        <module>demo-springboot-flowable</module>
     </modules>
 
 </project>
